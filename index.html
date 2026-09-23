@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game store</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1 class="titulo">Game Store</h1>
+
+        <button class="carrito" type="button" aria-label="Abrir carrito">
+            🧺
+            <span class="cantidad">0</span>
+        </button>
+    </header>
+
+    <main>
+        <section class="productos" aria-labelledby="titulo-productos">
+            <header class="cabecera-productos">
+                <h2 id="titulo-productos">Catalogo videojuegos</h2>
+                <p>
+                    Explora nuestros catalogo de videojuegos y agrégalos al carrito.
+                </p>
+            </header>
+
+            <article class="producto">
+                <button class="imagen" type="button">
+                    <img src="img/god.jpg" alt="juego de acción">
+                </button>
+                <h3>God of war</h3>
+
+                <p class="descripcion">
+                    God of War" es un videojuego de acción y aventura que sigue la historia de Kratos, un guerrero espartano, en su viaje junto a su hijo Atreus a través de la mitología nórdica, enfrentando dioses, monstruos y desafíos personales..
+                </p>
+
+                <p class="precio">$184.000 </p>
+
+                <button class="agregar" type="button">
+                    Agregar al carrito
+                </button>
+
+            </article>
+
+            <article class="producto">
+                <button class="imagen" type="button">
+                    <img src="img/gta6.jpeg" alt="juego de acción y aventura">
+                </button>
+
+                <h3>Grand Theft Auto VI</h3>
+
+                <p class="descripcion">
+                    Grand Theft Auto VI es la última entrega de acción y aventura de Rockstar Games, ambientada en el estado ficticio de Leonida, y sigue las vidas de la pareja de criminales Jason Duval y Lucia Caminos en un mundo abierto inspirado en Florida y Vice City.
+                </p>
+
+                <p class="precio">$268.349</p>
+
+                <button class="agregar" type="button">
+                    Agregar al carrito
+                </button>
+
+            </article>
+
+            <article class="producto">
+                <button class="imagen" type="button">
+                    <img src="img/resident.jpg" alt="juego de terror">
+                </button>
+
+                <h3>Resident Evil 4</h3>
+
+                <p class="descripcion">
+                    Resident Evil 4 sigue la historia del agente Leon S. Kennedy, quien debe rescatar a la hija del presidente estadounidense mientras enfrenta una insidiosa secta y criaturas infectadas por un parásito mortal.
+                </p>
+
+                <p class="precio">$121.800 </p>
+
+                <button class="agregar" type="button">
+                    Agregar al carrito
+                </button>
+
+            </article>
+
+            <article class="producto">
+
+                <button class="imagen" type="button">
+                    <img
+                        src="img/Morta.jpg"
+                        alt="juego de lucha"
+                    >
+                </button>
+
+                <h3>Mortal Kombat XL</h3>
+
+                <p class="descripcion">
+                    Mortal Kombat XL es la versión mejorada y completa de Mortal Kombat X, que incluye todos los contenidos descargables originales, nuevos luchadores DLC y mejoras jugables tanto en modos de un jugador como multijugador.
+                </p>
+
+                <p class="precio">$9.000</p>
+
+                <button class="agregar" type="button">
+                    Agregar al carrito
+                </button>
+
+            </article>
+
+            
+            <article class="producto">
+
+                <button class="imagen" type="button">
+                    <img
+                        src="img/red.jpg"  "
+                        alt="juego de acción y aventura"
+                    >
+                </button>
+
+                <h3>Red Dead Redemption 2</h3>
+
+                <p class="descripcion">
+                  Red Dead Redemption 2 es un juego de acción y aventura en mundo abierto aclamado por su historia inmersiva, mundo detallado y mecánicas profundas de juego.
+                </p>
+
+                <p class="precio">$51.478</p>
+
+                <button class="agregar" type="button">
+                    Agregar al carrito
+                </button>
+            </article>
+
+            <article class="producto">
+
+                <button class="imagen" type="button">
+                    <img
+                        src="img/unchart.avif"
+                        alt="juego de acción y aventura"
+                    >
+                </button>
+
+                <h3>UNCHARTED: Legacy of Thieves Collection</h3>
+
+                <p class="descripcion">
+                  UNCHARTED: Legacy of Thieves Collection es una recopilación remasterizada que incluye UNCHARTED 4: A Thief’s End y UNCHARTED: The Lost Legacy, con mejoras gráficas, rendimiento optimizado y experiencia cinematográfica inmersiva para PS5 y PC.
+                </p>
+
+                <p class="precio">$184.000</p>
+
+                <button class="agregar" type="button">
+                    Agregar al carrito
+                </button>
+            </article>
+
+        </section>
+
+
+        <aside class="ventana-carrito" aria-labelledby="titulo-carrito">
+
+            <header>
+                <h2 id="titulo-carrito">Carrito</h2>
+
+                <button type="button" aria-label="Cerrar carrito">
+                    ×
+                </button>
+            </header>
+
+
+            <ul class="lista">
+            </ul>
+
+
+            <footer class="total">
+
+                <p>
+                    Total
+                    <strong>$0</strong>
+                </p>
+
+                <button type="button">
+                    Comprar
+                </button>
+
+            </footer>
+
+        </aside>
+
+    </main>
+
+
+    <footer class="pie">
+
+        <p>
+            &copy; 2026 Game store. Todos los derechos reservados.
+        </p>
+
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
