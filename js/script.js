@@ -5,7 +5,11 @@ const botonCerrar = document.querySelector(".ventana-carrito header button");
 const productos = document.querySelectorAll(".producto");
 const lista = document.querySelector(".lista");
 const cantidad = document.querySelector(".cantidad");
-const total = document.querySelector(".total strong");
+
+// Selectores para mostrar subtotal, descuento y total final
+const subtotalElemento = document.querySelector(".subtotal-valor");
+const descuentoElemento = document.querySelector(".descuento-valor");
+const totalElemento = document.querySelector(".total strong:last-of-type") || document.querySelector(".total strong");
 
 let carrito = [];
 
@@ -105,7 +109,7 @@ function actualizarCarrito() {
 
     lista.innerHTML = "";
 
-    let totalCarrito = 0;
+    let subtotalCarrito = 0;
     let cantidadProductos = 0;
 
 
@@ -165,23 +169,35 @@ function actualizarCarrito() {
         lista.appendChild(elemento);
 
 
-        // Calcular total
+        // Calcular subtotal
 
-        totalCarrito += precioProducto;
+        subtotalCarrito += precioProducto;
 
         cantidadProductos += producto.cantidad;
 
     });
 
 
-    // Actualizar contador
+    // --- CÁLCULO DEL DESCUENTO DEL 10% ---
+    const descuento = subtotalCarrito * 0.10;
+    const totalFinal = subtotalCarrito - descuento;
 
+
+    // Actualizar contador de cantidad
     cantidad.textContent = cantidadProductos;
 
 
-    // Actualizar total
+    // Actualizar los valores en la interfaz del carrito
+    if (subtotalElemento) {
+        subtotalElemento.textContent = `$${subtotalCarrito.toLocaleString("es-CO")}`;
+    }
 
-    total.textContent =
-        `$${totalCarrito.toLocaleString("es-CO")}`;
+    if (descuentoElemento) {
+        descuentoElemento.textContent = `-$${descuento.toLocaleString("es-CO")}`;
+    }
+
+    if (totalElemento) {
+        totalElemento.textContent = `$${totalFinal.toLocaleString("es-CO")}`;
+    }
 
 }
